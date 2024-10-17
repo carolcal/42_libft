@@ -6,7 +6,7 @@
 /*   By: cayamash <cayamash@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 14:42:53 by cayamash          #+#    #+#             */
-/*   Updated: 2024/10/10 16:07:38 by cayamash         ###   ########.fr       */
+/*   Updated: 2024/10/16 11:38:30 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	*ptr;
 
 	i = 0;
@@ -26,7 +26,7 @@ void	ft_bzero(void *s, size_t n)
 	}
 }
 
-#include <strings.h>
+/*#include <strings.h>
 #include <stdio.h>
 int main()
 {
@@ -42,4 +42,4 @@ int main()
     char *s4 = s3 + 4;
     printf("%s\n", s4);
     return (0);
-}
+}*/

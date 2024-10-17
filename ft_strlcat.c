@@ -6,7 +6,7 @@
 /*   By: cayamash <cayamash@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 12:46:00 by cayamash          #+#    #+#             */
-/*   Updated: 2024/10/10 16:03:46 by cayamash         ###   ########.fr       */
+/*   Updated: 2024/10/16 11:44:21 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	return (dlen + slen);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 int	main(void)
 {
 	char	s1[30] = "Don't call ";
@@ -46,8 +46,11 @@ int	main(void)
 	char	s5[30] = "Don't call ";
 	char	*s6 = "my name, Alejandro";
 	
-	printf ("string1: %s, string2: %s, return: %u\n", s1, s2, ft_strlcat(s1, s2, 5));
-	printf ("string1: %s, string2: %s, return: %u\n", s3, s4, ft_strlcat(s3, s4, 30));
-	printf ("string1: %s, string2: %s, return: %u\n", s5, s6, ft_strlcat(s5, s6, 16));
+	printf ("string1: %s, string2: %s, 
+return: %u\n", s1, s2, ft_strlcat(s1, s2, 5));
+	printf ("string1: %s, string2: %s, 
+return: %u\n", s3, s4, ft_strlcat(s3, s4, 30));
+	printf ("string1: %s, string2: %s, 
+return: %u\n", s5, s6, ft_strlcat(s5, s6, 16));
 	return(0);
-}
+}*/

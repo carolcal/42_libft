@@ -6,7 +6,7 @@
 #    By: cayamash <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/08 15:38:33 by cayamash          #+#    #+#              #
-#    Updated: 2024/10/08 15:46:10 by cayamash         ###   ########.fr        #
+#    Updated: 2024/10/16 19:30:44 by cayamash         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = libft.a
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra
 
-SRCS = $(wildcard *.C)
+SRCS = $(wildcard *.c)
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
@@ -30,4 +30,4 @@ fclean: clean
 
 re: fclean all
 
-.PRONY: all clean fclean re
+.PHONY: all clean fclean re

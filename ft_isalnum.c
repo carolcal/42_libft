@@ -6,7 +6,7 @@
 /*   By: cayamash <cayamash@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 15:56:51 by cayamash          #+#    #+#             */
-/*   Updated: 2024/10/10 16:03:20 by cayamash         ###   ########.fr       */
+/*   Updated: 2024/10/16 11:33:28 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 int	ft_isalnum(int c)
 {
-	if((c >= 48 && c <= 57) || (c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+	if ((c >= 48 && c <= 57) || (c >= 65 && c <= 90) || (c >= 97 && c <= 122))
 		return (8);
 	return (0);
 }
 
-#include <ctype.h>
+/*#include <ctype.h>
 #include <stdio.h>
 int	main()
 {
@@ -27,4 +27,4 @@ int	main()
 	printf("char: 9, original: %i, lib: %i\n", isalnum('9'), ft_isalnum('9'));
 	printf("char: *, original: %i, lib: %i\n", isalnum('*'), ft_isalnum('*'));
 	return (0);
-}
+}*/
