@@ -6,7 +6,7 @@
 /*   By: cayamash <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 11:57:31 by cayamash          #+#    #+#             */
-/*   Updated: 2024/10/16 14:05:40 by cayamash         ###   ########.fr       */
+/*   Updated: 2024/10/17 11:41:58 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,22 +23,17 @@ char	*ft_strchr(const char *s, int c)
 			return (ptr);
 		ptr++;
 	}
+	if (*ptr == c)
+		return (ptr);
 	return (NULL);
 }
 
-/*#include <string.h>
-#include <stdio.h>
 int	main(void)
 {
-	char	*str = "Engenharia de Software";
-	char	c = 'i';
-	char	*ptr1;
-	char	*ptr2;
+	char	*str = "teste";
+//	char	c = '\0';
 
-	ptr1 = strchr(str, c);
-	ptr2 = ft_strchr(str, c);
-
-	printf("str: %p, prt: %p\n", str, ptr1);
-	printf("str: %p, prt: %p", str, ptr2);
+	printf("str: %p, prt: %p\n", str, strchr("teste", 'e'));
+	printf("str: %p, prt: %p", str, ft_strchr("teste", 'e'));
 	return (0);
-}*/
+}

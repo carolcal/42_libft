@@ -6,7 +6,7 @@
 /*   By: cayamash <cayamash@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 15:24:50 by cayamash          #+#    #+#             */
-/*   Updated: 2024/10/16 19:43:17 by cayamash         ###   ########.fr       */
+/*   Updated: 2024/10/17 10:37:45 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # include <string.h> //del
 # include <stdio.h> //del
 # include <unistd.h> //del
-# include <check.h> //del
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -35,7 +34,7 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
-int	ft_atoi(const char *nptr);
+int		ft_atoi(const char *nptr);
 void	*ft_memset(void *s, int c, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);

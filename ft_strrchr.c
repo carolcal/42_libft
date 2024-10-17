@@ -6,7 +6,7 @@
 /*   By: cayamash <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 14:13:48 by cayamash          #+#    #+#             */
-/*   Updated: 2024/10/16 15:01:21 by cayamash         ###   ########.fr       */
+/*   Updated: 2024/10/17 10:56:50 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,18 @@ char	*ft_strrchr(const char *s, int c)
 			ptr2 = ptr1;
 		ptr1++;
 	}
+	if (!ptr2 && c == '\0')
+		return (ptr1);
 	return (ptr2);
 }
 
 /*int	main(void)
 {
 	char	*s = "Um ninho de mafagafinhos tres mafagafinhos ha.";
-	char	c = 'm';
-	char	*p1;
-	char	*p2;
-	p1 = strrchr(s, c);
-	printf("s:%p, p:%p\n", s, p1);
-	p2 = ft_strrchr(s, c);
-	printf("s:%p, p:%p", s, p2);
+	char	*s2 = "";
+	char	c = 'y';
+
+	printf("s:%p, p:%p\n", s2, strrchr(s2, c));
+	printf("s:%p, p:%p", s2, ft_strrchr(s2, c));
 	return (0);
 }*/
