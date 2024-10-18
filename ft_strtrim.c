@@ -1,39 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cayamash <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/16 11:57:31 by cayamash          #+#    #+#             */
-/*   Updated: 2024/10/17 12:02:36 by cayamash         ###   ########.fr       */
+/*   Created: 2024/10/18 11:51:47 by cayamash          #+#    #+#             */
+/*   Updated: 2024/10/18 12:10:18 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strchr(const char *s, int c)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*ptr;
+	int	i;
+	int	j;
+	int	s1_len;
+	char	*s_trim;
 
-	ptr = (char *)s;
-	while (*ptr != '\0')
+	i = 0;
+	j = 0;
+	s1_len = ft_strlen(s1);
+	s_trim = malloc((s1_len + 1), sizeof(char))
+	while(s1[i] != '\0')
 	{
-		if (*ptr == (unsigned char)c)
-			return (ptr);
-		ptr++;
+		while(set[j] != '\0')
+		{
+			if (s1[i] == set[j])
+				
+		}
 	}
-	if (*ptr == (unsigned char)c)
-		return (ptr);
-	return (NULL);
 }
 
-/*int	main(void)
+int	main()
 {
-	char	*str = "teste";
-//	char	c = '\0';
-
-	printf("str: %p, prt: %p\n", str, strchr("teste", 't' + 256));
-	printf("str: %p, prt: %p", str, ft_strchr("teste", 't' + 256));
 	return (0);
-}*/
+}

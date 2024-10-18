@@ -1,39 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cayamash <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/16 11:57:31 by cayamash          #+#    #+#             */
-/*   Updated: 2024/10/17 12:02:36 by cayamash         ###   ########.fr       */
+/*   Created: 2024/10/18 10:27:46 by cayamash          #+#    #+#             */
+/*   Updated: 2024/10/18 11:49:28 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*ptr;
+	char	*sub;
+	int		s_len;
+	int		size;
 
-	ptr = (char *)s;
-	while (*ptr != '\0')
-	{
-		if (*ptr == (unsigned char)c)
-			return (ptr);
-		ptr++;
-	}
-	if (*ptr == (unsigned char)c)
-		return (ptr);
-	return (NULL);
+	s_len = ft_strlen(s);
+	if (len <= ((s_len + 1) - start))
+		size = len;
+	else
+		size = (s_len + start);
+	sub = malloc((size + 1) * sizeof(char));
+	if (!sub)
+		return (NULL);
+	ft_strlcpy(sub, s + start, size + 1);
+	return (sub);
 }
 
 /*int	main(void)
 {
-	char	*str = "teste";
-//	char	c = '\0';
-
-	printf("str: %p, prt: %p\n", str, strchr("teste", 't' + 256));
-	printf("str: %p, prt: %p", str, ft_strchr("teste", 't' + 256));
+	printf("%s\n", ft_substr("O Emerson e um tiozao", 3, 30));
+	printf("%s", ft_substr("", 7, 3));
 	return (0);
 }*/

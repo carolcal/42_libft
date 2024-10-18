@@ -1,43 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cayamash <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/16 14:13:48 by cayamash          #+#    #+#             */
-/*   Updated: 2024/10/17 12:10:03 by cayamash         ###   ########.fr       */
+/*   Created: 2024/10/17 14:10:12 by cayamash          #+#    #+#             */
+/*   Updated: 2024/10/17 14:50:13 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	char	*ptr1;
-	char	*ptr2;
+	size_t				i;
+	const unsigned char	*ptr1;
+	const unsigned char	*ptr2;
 
-	ptr1 = (char *)s;
-	ptr2 = NULL;
-	while (*ptr1 != '\0')
+	i = 0;
+	ptr1 = (const unsigned char *)s1;
+	ptr2 = (const unsigned char *)s2;
+	while (i < n)
 	{
-		if (*ptr1 == (unsigned char)c)
-			ptr2 = ptr1;
-		ptr1++;
+		if (ptr1[i] != ptr2[i])
+			return (ptr1[i] - ptr2[i]);
+		i++;
 	}
-	if (!ptr2 && (unsigned char)c == '\0')
-		return (ptr1);
-	return (ptr2);
+	return (0);
 }
 
 /*int	main(void)
 {
-	char	*s = "Um ninho de mafagafinhos tres mafagafinhos ha.";
-//	char	*s2 = "";
-//	char	c = '\0';
+	char s1[] = "\200";
+	char s2[] = "\0";
 
-	printf("s:%p, p:%p\n", s, strrchr("teste", '\0' + 256));
-	printf("s:%p, p:%p", s, ft_strrchr("teste", '\0' + 256));
+	printf("Original: %i\n", memcmp(s1, s2, 5));
+	printf("Libft: %i", ft_memcmp(s1, s2, 5));
 	return (0);
-
 }*/

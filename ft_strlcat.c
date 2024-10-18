@@ -6,7 +6,7 @@
 /*   By: cayamash <cayamash@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 12:46:00 by cayamash          #+#    #+#             */
-/*   Updated: 2024/10/17 10:36:41 by cayamash         ###   ########.fr       */
+/*   Updated: 2024/10/17 12:42:20 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	slen;
 	size_t	i;
 
-	dlen = 0;
-	slen = 0;
+	dlen = ft_strlen(dst);
+	slen = ft_strlen(src);
 	i = 0;
-	while (dst[dlen] != '\0')
-		dlen++;
-	while (src[slen] != '\0')
-		slen++;
 	if (size <= dlen)
 		return (slen + size);
 	while ((i < slen) && (dlen + i) < (size - 1))

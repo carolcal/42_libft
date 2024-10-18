@@ -6,7 +6,7 @@
 /*   By: cayamash <cayamash@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 14:42:53 by cayamash          #+#    #+#             */
-/*   Updated: 2024/10/16 11:38:30 by cayamash         ###   ########.fr       */
+/*   Updated: 2024/10/18 10:18:47 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,7 @@ void	ft_bzero(void *s, size_t n)
 	}
 }
 
-/*#include <strings.h>
-#include <stdio.h>
+/*
 int main()
 {
     char s1[] = "Era uma vez";
