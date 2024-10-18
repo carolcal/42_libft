@@ -1,47 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cayamash <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/18 11:51:47 by cayamash          #+#    #+#             */
-/*   Updated: 2024/10/18 19:05:20 by cayamash         ###   ########.fr       */
+/*   Created: 2024/10/18 15:07:10 by cayamash          #+#    #+#             */
+/*   Updated: 2024/10/18 15:30:53 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_contains(char c, const char *set)
-{
-	int	i;
-
-	i = 0;
-	while (set[i] != c && set[i] != '\0')
-		i++;
-	if (set[i] == c)
-		return (1);
-	return (0);
-}
-
-char	*ft_strtrim(char const *s1, char const *set)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	int		i;
-	int		j;
-	int		len;
+	int		s_len;
+	char	*str;
 
-	len = ft_strlen(s1);
 	i = 0;
-	j = len;
-	while (ft_contains(s1[i], set) == 1)
+	s_len = ft_strlen(s);
+	str = malloc((s_len + 1) * sizeof(char));
+	while (i <= s_len)
+	{
+		str[i] = (*f)(i, s[i]);
 		i++;
-	while (ft_contains(s1[j], set) == 1)
-		j--;
-	return (ft_substr(s1, i, (j - i + 1)));
+	}
+	str[i] = '\0';
+	return (str);
 }
 
-/*int	main()
+/*char	ft_plusindex(unsigned int i, char c)
 {
-	printf("%s", ft_strtrim("%Ieiheheieihe%I", "Ie%"));
+	return (c + i);
+}
+
+int	main(void)
+{
+	printf("%s", ft_strmapi("eu sou o tudo e o nada", &ft_plusindex));
 	return (0);
 }*/
