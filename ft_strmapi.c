@@ -14,14 +14,16 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int		i;
-	int		s_len;
-	char	*str;
+	unsigned int	i;
+	unsigned int	s_len;
+	char			*str;
 
 	i = 0;
 	s_len = ft_strlen(s);
 	str = malloc((s_len + 1) * sizeof(char));
-	while (i <= s_len)
+	if (!str)
+		return (NULL);
+	while (i < s_len)
 	{
 		str[i] = (*f)(i, s[i]);
 		i++;
@@ -37,6 +39,18 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 int	main(void)
 {
-	printf("%s", ft_strmapi("eu sou o tudo e o nada", &ft_plusindex));
+	//printf("%s", ft_strmapi("eu sou o tudo e o nada", &ft_plusindex));
+     char *b = "override this !";
+        size_t size = strlen(b);
+        char b2[size + 1];
+
+        for (size_t i = 0; i < size; i++)
+                b2[i] = ft_plusindex(i, b[i]);
+        b2[size] = '\0';
+        char *ret = ft_strmapi(b, ft_plusindex);
+        if (!strcmp(b2, ret))
+                printf("TEST_SUCCESS");
+        else
+            printf("TEST_FAILED");
 	return (0);
 }*/
