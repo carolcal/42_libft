@@ -28,7 +28,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		size = len;
 	else
 		size = (s_len - start);
-	sub = malloc((size + 1) * sizeof(char));
+	sub = malloc((size + 1) * sizeof(char)); //usar calloc
 	if (!sub)
 		return (NULL);
 	ft_strlcpy(sub, s + start, size + 1);
