@@ -69,7 +69,7 @@ int	str_split(char **array, int array_len, char *s1, char *set)
 char	**ft_split(char const *s, char c)
 {
 	int		array_len;
-	char	*s1;
+	char	*s1; //usar strdup 
 	char	**array;
 	char	set[2];
 
@@ -80,7 +80,7 @@ char	**ft_split(char const *s, char c)
 		array_len = 1;
 	else
 		array_len = ft_count_strch(s1, c) + 2;
-	array = malloc(array_len * sizeof(char *));
+	array = malloc(array_len * sizeof(char *)); //usar calloc
 	if (!array)
 		return (NULL);
 	if (!(str_split(array, array_len, s1, set)))
