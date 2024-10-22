@@ -6,29 +6,27 @@
 /*   By: cayamash <cayamash@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 09:56:02 by cayamash          #+#    #+#             */
-/*   Updated: 2024/10/16 11:43:29 by cayamash         ###   ########.fr       */
+/*   Updated: 2024/10/22 15:59:24 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	slen;
 	size_t	dlen;
 
-	slen = 0;
 	dlen = 0;
-	while (src[slen] != '\0')
-		slen++;
+	slen = ft_strlen(src);
 	if (size > 0)
 	{
 		while (src[dlen] != '\0' && dlen < (size - 1))
 		{
-			dest[dlen] = src[dlen];
+			dst[dlen] = src[dlen];
 			dlen++;
 		}
-		dest[dlen] = '\0';
+		dst[dlen] = '\0';
 	}
 	return (slen);
 }

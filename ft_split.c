@@ -6,7 +6,7 @@
 /*   By: cayamash <cayamash@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 16:05:29 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/22 14:40:56 by cayamash         ###   ########.fr       */
+/*   Updated: 2024/10/22 15:15:36 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	count_words(char const *s, char c)
 
 	i = 0;
 	count = 0;
-	if (strlen(s) == 0)
+	if (ft_strlen(s) == 0)
 		return (0);
 	while (s[i] != '\0')
 	{
