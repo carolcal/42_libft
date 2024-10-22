@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: cayamash <cayamash@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 16:04:59 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/19 16:04:59 by marvin           ###   ########.fr       */
+/*   Updated: 2024/10/22 10:44:58 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int	count_numint(long num)
 	int	sin;
 
 	i = 0;
+	sin = 0;
 	if (num == 0)
 		return (2);
 	if (num < 0)
@@ -64,7 +65,7 @@ char	*ft_itoa(int n)
 	return (nbr);
 }
 
-/* int	main(void)
+/*int	main(void)
 {
 	printf("%s\n", ft_itoa(-67));
 	printf("%s\n", ft_itoa(INT_MIN));
@@ -72,4 +73,4 @@ char	*ft_itoa(int n)
 	printf("%s\n", ft_itoa(0));
 	printf("%s\n", ft_itoa(-357));
 	return (0);
-} */
+}*/

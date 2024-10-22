@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cayamash <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cayamash <cayamash@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 10:27:46 by cayamash          #+#    #+#             */
-/*   Updated: 2024/10/18 18:25:46 by cayamash         ###   ########.fr       */
+/*   Updated: 2024/10/22 10:21:34 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		size = len;
 	else
 		size = (s_len - start);
-	sub = malloc((size + 1) * sizeof(char)); //usar calloc
+	sub = malloc((size + 1) * sizeof(char));
 	if (!sub)
 		return (NULL);
 	ft_strlcpy(sub, s + start, size + 1);

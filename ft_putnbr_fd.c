@@ -6,7 +6,7 @@
 /*   By: cayamash <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 14:20:31 by cayamash          #+#    #+#             */
-/*   Updated: 2024/10/18 15:02:18 by cayamash         ###   ########.fr       */
+/*   Updated: 2024/10/22 10:53:44 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,6 @@ void	ft_putnbr_fd(int n, int fd)
 	long	nb;
 
 	nb = n;
-	if (fd == -1)
-		return ;
 	if (nb < 0)
 	{
 		ft_putchar_fd('-', fd);
