@@ -6,20 +6,16 @@
 /*   By: cayamash <cayamash@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 15:24:50 by cayamash          #+#    #+#             */
-/*   Updated: 2024/10/22 15:59:33 by cayamash         ###   ########.fr       */
+/*   Updated: 2024/10/22 16:12:56 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdlib.h>//size_t
-# include <unistd.h>//write
-# include <fcntl.h>//open, read
-# include <ctype.h> //del
-# include <string.h> //del
-# include <stdio.h> //del
-# include <limits.h> //del
+# include <stdlib.h>
+# include <unistd.h>
+# include <fcntl.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
