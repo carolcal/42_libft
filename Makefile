@@ -6,7 +6,7 @@
 #    By: cayamash <cayamash@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/08 15:38:33 by cayamash          #+#    #+#              #
-#    Updated: 2024/10/23 18:25:07 by cayamash         ###   ########.fr        #
+#    Updated: 2024/10/24 10:48:06 by cayamash         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,14 +23,21 @@ SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c\
 		ft_substr.c ft_strjoin.c ft_strtrim.c ft_strmapi.c\
 		ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
-BONUS = ft_lstnew.c ft_lstadd_front.c ft_ls
+BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_strlast.c\
+		ft_lstadd_back.c ft_lstdelone.c ft_llstclear.c\
+		ft_lstiter.c ft_lstmap.c
 
 OBJS = $(SRCS:.c=.o)
+
+OBJS_BONUS = $(BONUS:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
+
+bonus: $(OBJS_BONUS)
+	ar rcs $(NAME) $(OBJS_BONUS)
 
 %o: %c
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -43,4 +50,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all bonus clean fclean re
