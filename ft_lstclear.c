@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cayamash <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cayamash <cayamash@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 15:34:19 by cayamash          #+#    #+#             */
-/*   Updated: 2024/10/23 16:04:16 by cayamash         ###   ########.fr       */
+/*   Updated: 2024/10/24 11:43:46 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*temp_next;
 
 	temp = *lst;
-	while(temp != NULL)
+	while (temp != NULL)
 	{
 		temp_next = temp->next;
 		ft_lstdelone(temp, del);
@@ -46,7 +46,8 @@ int	main(void)
 	t_list *temp = head;
 	while(temp != NULL)
 	{
-		printf("pointer: %p, content:%s, next: %p\n",temp, (char *)temp->content, temp->next);
+		printf("pointer: %p, content:%s, 
+		next: %p\n",temp, (char *)temp->content, temp->next);
 		temp = temp->next;
 	}
 	ft_lstclear(&head, &del);

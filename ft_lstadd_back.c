@@ -6,7 +6,7 @@
 /*   By: cayamash <cayamash@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 13:52:32 by cayamash          #+#    #+#             */
-/*   Updated: 2024/10/23 17:54:51 by cayamash         ###   ########.fr       */
+/*   Updated: 2024/10/24 11:47:06 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last;
 
-	if(!lst || !new)
+	if (!lst || !new)
 		return ;
 	last = ft_lstlast(*lst);
 	if (!last)
@@ -38,7 +38,8 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	t_list *temp = head;
 	while(temp != NULL)
 	{
-		printf("pointer: %p, content:%s, next: %p\n",temp, (char *)temp->content, temp->next);
+		printf("pointer: %p, content:%s, 
+		next: %p\n",temp, (char *)temp->content, temp->next);
 		temp = temp->next;
 	}
 	free(n1);

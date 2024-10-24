@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cayamash <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cayamash <cayamash@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 16:05:07 by cayamash          #+#    #+#             */
-/*   Updated: 2024/10/23 16:17:31 by cayamash         ###   ########.fr       */
+/*   Updated: 2024/10/24 11:46:51 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list *temp;
+	t_list	*temp;
 
 	temp = lst;
 	while (temp != NULL)
 	{
-		f(temp);
+		f(temp->content);
 		temp = temp->next;
 	}
 }
@@ -37,7 +37,6 @@ int	main(void)
 	t_list *n2 = ft_lstnew("New New Node");
 	ft_lstadd_front(&head, n1);
 	ft_lstadd_front(&head, n2);
-
 	ft_lstiter(head, &print);
 	return (0);
 }*/

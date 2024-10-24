@@ -6,13 +6,13 @@
 /*   By: cayamash <cayamash@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 17:01:49 by cayamash          #+#    #+#             */
-/*   Updated: 2024/10/24 09:55:38 by cayamash         ###   ########.fr       */
+/*   Updated: 2024/10/24 12:11:26 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void(*del)(void*))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_lst;
 	t_list	*temp;
@@ -20,26 +20,27 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void(*del)(void*))
 
 	temp = lst;
 	new_lst = NULL;
-	new_node = NULL;
 	while (temp != NULL)
 	{
-		temp = f(temp);
-		new_node = ft_lstnew(temp->content);
+		new_node = ft_lstnew((*f)(temp->content));
+		if (!new_node)
+		{
+			(del)(temp);
+			(del)(new_node);
+			(del)(new_lst);
+			return (NULL);
+		}
 		ft_lstadd_back(&new_lst, new_node);
 		temp = temp->next;
 	}
-	del(temp);
-	del(new_node);
+	(del)(temp);
 	return (new_lst);
 }
 
-void	*uau(void *node)
+/*void	*uau(void *node)
 {
-	char	*str = ft_strdup("Uau");
-	t_list *temp = node;
-	temp->content = str;
-	free(node);
-	return (temp);
+	node = ft_strdup("Uau");
+	return (node);
 }
 
 void del(void *node)
@@ -55,12 +56,18 @@ int	main(void)
 	ft_lstadd_front(&head, n1);
 	ft_lstadd_front(&head, n2);
 
-	t_list *head2 = ft_lstmap(head, &uau, &del);
-	t_list *temp = head2;
+	t_list *temp = head;
 	while(temp != NULL)
 	{
-		printf("pointer: %p, content:%s, next: %p\n",temp, (char *)temp->content, temp->next);
+		printf("p: %p, c:%s, n: %p\n",temp, (char *)temp->content, temp->next);
+		temp = temp->next;
+	}
+	t_list *head2 = ft_lstmap(head, &uau, &del);
+	temp = head2;
+	while(temp != NULL)
+	{
+		printf("p: %p, c:%s, n: %p\n",temp, (char *)temp->content, temp->next);
 		temp = temp->next;
 	}
 	return (0);
-}
+}*/
