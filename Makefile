@@ -6,7 +6,7 @@
 #    By: cayamash <cayamash@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/08 15:38:33 by cayamash          #+#    #+#              #
-#    Updated: 2024/10/23 10:17:12 by cayamash         ###   ########.fr        #
+#    Updated: 2024/10/23 18:25:07 by cayamash         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,8 @@ SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c\
 		ft_atoi.c ft_calloc.c ft_itoa.c ft_split.c ft_striteri.c\
 		ft_substr.c ft_strjoin.c ft_strtrim.c ft_strmapi.c\
 		ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
+
+BONUS = ft_lstnew.c ft_lstadd_front.c ft_ls
 
 OBJS = $(SRCS:.c=.o)
 
