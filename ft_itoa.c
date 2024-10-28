@@ -6,13 +6,13 @@
 /*   By: cayamash <cayamash@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 16:04:59 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/22 10:44:58 by cayamash         ###   ########.fr       */
+/*   Updated: 2024/10/24 14:11:12 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_convitoa(size_t num, char *nbr, int i)
+static int	ft_convitoa(size_t num, char *nbr, int i)
 {
 	if (num > 9)
 		i = ft_convitoa((num / 10), nbr, i);
@@ -20,7 +20,7 @@ int	ft_convitoa(size_t num, char *nbr, int i)
 	return (i + 1);
 }
 
-int	count_numint(long num)
+static int	count_numint(long num)
 {
 	int	i;
 	int	sin;

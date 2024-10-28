@@ -6,13 +6,13 @@
 /*   By: cayamash <cayamash@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 16:05:29 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/22 15:15:36 by cayamash         ###   ########.fr       */
+/*   Updated: 2024/10/24 14:12:37 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_words(char const *s, char c)
+static int	count_words(char const *s, char c)
 {
 	int	i;
 	int	count;
@@ -35,7 +35,7 @@ int	count_words(char const *s, char c)
 	return (count);
 }
 
-void	fill_array(char **array, int size, char const *s, char c)
+static void	fill_array(char **array, int size, char const *s, char c)
 {
 	int	i;
 	int	j;

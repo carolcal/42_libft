@@ -6,7 +6,7 @@
 /*   By: cayamash <cayamash@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 09:46:18 by cayamash          #+#    #+#             */
-/*   Updated: 2024/10/16 11:36:32 by cayamash         ###   ########.fr       */
+/*   Updated: 2024/10/24 15:30:50 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,3 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-// #include <string.h>
-// #include <stdio.h>
-// int	main()
-// {
-// 	char	*s1 = "Hello";
-// 	char	*s2 = "Hello";
-//	printf ("string: %s, original: %lu, lib: %lu\n", 
-//s1, strlen(s1), ft_strlen(s2));
-// 	return (0);
-// }

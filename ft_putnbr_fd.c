@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cayamash <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cayamash <cayamash@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 14:20:31 by cayamash          #+#    #+#             */
-/*   Updated: 2024/10/22 10:53:44 by cayamash         ###   ########.fr       */
+/*   Updated: 2024/10/24 14:12:09 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_printnbr_fd(long nb, int fd)
+static void	ft_printnbr_fd(long nb, int fd)
 {
 	char	c;
 

@@ -6,7 +6,7 @@
 /*   By: cayamash <cayamash@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 15:04:43 by cayamash          #+#    #+#             */
-/*   Updated: 2024/10/22 15:20:57 by cayamash         ###   ########.fr       */
+/*   Updated: 2024/10/24 15:20:39 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	return (0);
 }
 
-/*int	main (void)
-{
-	char *s1 = "\200";
-	char *s2 = "\0";
-
-	printf("original %i\n", strncmp(s1, s2, 3));
-	printf("mine: %i", ft_strncmp(s1, s2, 3));
-	return(0);
-}*/

@@ -6,7 +6,7 @@
 /*   By: cayamash <cayamash@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 09:56:02 by cayamash          #+#    #+#             */
-/*   Updated: 2024/10/22 15:59:24 by cayamash         ###   ########.fr       */
+/*   Updated: 2024/10/24 15:59:47 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	return (slen);
 }
 
-/*#include <stdio.h>
-int	main(void)
-{
-	char	s1[30];
-	char	*s2 = "Meu nome é Caroline!";
-	printf ("string1: %s, string2: %s, 
-return: %u\n", s1, s2, ft_strlcpy(s1, s2, 5));
-	return(0);
-}*/
