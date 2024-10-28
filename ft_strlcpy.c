@@ -6,7 +6,7 @@
 /*   By: cayamash <cayamash@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 09:56:02 by cayamash          #+#    #+#             */
-/*   Updated: 2024/10/24 15:59:47 by cayamash         ###   ########.fr       */
+/*   Updated: 2024/10/28 14:00:40 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	}
 	return (slen);
 }
-

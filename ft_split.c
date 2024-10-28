@@ -6,7 +6,7 @@
 /*   By: cayamash <cayamash@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 16:05:29 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/24 14:12:37 by cayamash         ###   ########.fr       */
+/*   Updated: 2024/10/28 16:45:27 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,15 @@ static int	count_words(char const *s, char c)
 	return (count);
 }
 
+static void	free_array(char **array, int index)
+{
+	while (index >= 0)
+	{
+		free(array[index]);
+		index--;
+	}
+}
+
 static void	fill_array(char **array, int size, char const *s, char c)
 {
 	int	i;
@@ -51,6 +60,8 @@ static void	fill_array(char **array, int size, char const *s, char c)
 		while (s[i + len] && s[i + len] != c)
 			len++;
 		array[j] = ft_substr(s, i, len);
+		if (!array[j])
+			free_array(array, j);
 		j++;
 		i += len;
 	}

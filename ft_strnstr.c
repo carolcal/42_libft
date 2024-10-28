@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cayamash <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cayamash <cayamash@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 15:20:38 by cayamash          #+#    #+#             */
-/*   Updated: 2024/10/16 17:43:28 by cayamash         ###   ########.fr       */
+/*   Updated: 2024/10/28 16:57:19 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (0);
 }
-
-/*int	main(void)
-{
-	char	*big = "I am big";
-	char	*little = "m b";
-
-	printf("big: %p, result:%p", big, ft_strnstr(big, little, 10));
-	return (0);
-}*/

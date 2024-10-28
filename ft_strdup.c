@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cayamash <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cayamash <cayamash@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 15:28:50 by cayamash          #+#    #+#             */
-/*   Updated: 2024/10/17 18:40:00 by cayamash         ###   ########.fr       */
+/*   Updated: 2024/10/28 17:31:30 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,13 @@
 
 char	*ft_strdup(const char *s)
 {
+	size_t	len;
 	char	*ptr;
-	int		size;
-	int		i;
 
-	i = 0;
-	size = ft_strlen(s);
-	ptr = ft_calloc(size + 1, sizeof(char));
+	len = ft_strlen(s);
+	ptr = ft_calloc(len + 1, sizeof(char));
 	if (!ptr)
 		return (NULL);
-	while (i < size)
-	{
-		ptr[i] = s[i];
-		i++;
-	}
-	ptr[i] = '\0';
+	ft_strlcpy(ptr, s, len + 1);
 	return (ptr);
 }
-
-/*int	main(void)
-{
-	printf("%s\n", strdup("lorem ipsum dolor sit amet"));
-	printf("%s", ft_strdup("lorem ipsum dolor sit amet"));
-	return (0);
-}*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cayamash <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cayamash <cayamash@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 15:01:15 by cayamash          #+#    #+#             */
-/*   Updated: 2024/10/17 18:13:38 by cayamash         ###   ########.fr       */
+/*   Updated: 2024/10/28 14:01:01 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
 
-	if (nmemb > 0 && size > 0 && (nmemb * size) / nmemb != size)
+	if (nmemb * size != 0 && (nmemb * size) / nmemb != size)
 		return (NULL);
 	ptr = malloc(nmemb * size);
 	if (!ptr)
@@ -24,7 +24,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_memset(ptr, 0, nmemb * size);
 	return (ptr);
 }
-
 //int	main(void)
 //{
 /*	int n1 = 30;

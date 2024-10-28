@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cayamash <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cayamash <cayamash@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 17:44:22 by cayamash          #+#    #+#             */
-/*   Updated: 2024/10/16 18:14:49 by cayamash         ###   ########.fr       */
+/*   Updated: 2024/10/28 17:45:49 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,19 +28,10 @@ int	ft_atoi(const char *nptr)
 		sin = -1;
 		nptr ++;
 	}
-	while (*nptr >= '0' && *nptr <= '9')
+	while (ft_isdigit(*nptr))
 	{
-		num = (num * 10);
-		num = num + (*nptr - '0');
+		num = (num * 10) + (*nptr - '0');
 		nptr++;
 	}
 	return (num * sin);
 }
-
-/*int	main(void)
-{
-	char	*nbr = "  	-321a76";
-	printf("original: %i\n", atoi(nbr));
-	printf("mine: %i", ft_atoi(nbr));
-	return (0);
-}*/

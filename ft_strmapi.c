@@ -6,7 +6,7 @@
 /*   By: cayamash <cayamash@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 15:07:10 by cayamash          #+#    #+#             */
-/*   Updated: 2024/10/22 10:28:28 by cayamash         ###   ########.fr       */
+/*   Updated: 2024/10/28 14:00:52 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
-
 /*char	ft_plusindex(unsigned int i, char c)
 {
 	return (c + i);

@@ -6,7 +6,7 @@
 /*   By: cayamash <cayamash@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 13:33:45 by cayamash          #+#    #+#             */
-/*   Updated: 2024/10/16 11:37:34 by cayamash         ###   ########.fr       */
+/*   Updated: 2024/10/28 18:18:35 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned int	i;
+	size_t			i;
 	unsigned char	*ptr;
 
 	i = 0;
@@ -26,19 +26,3 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
-
-/*#include <stdio.h>
-#include <string.h>
-int main()
-{
-    char s1[50] = "Isso e uma string.";
-    char s2[50] = "Isso e uma string.";
-    unsigned char c = 130;
-    int n = 7;
-
-    memset(s1, c, n);
-    ft_memset(s2, c, n);
-    printf("string: %s, char: %u, n: %i\n", s1, c, n);
-    printf("string: %s, char: %u, n: %i\n", s2, c, n);
-    return (0);
-}*/
