@@ -75,5 +75,3 @@ To use Libft in your project, compile it as follows:
 ```c
 cc -Wall -Werror -Wexta file.c -o yourprogram
 ```
-
-This README provides an overview of the functions implemented in Libft. Each function mirrors standard C library behavior as closely as possible while following the project’s constraints.
