@@ -1,7 +1,3 @@
-Here’s a sample README file for your libft project, with a brief description for each function:
-
----
-
 # Libft
 
 Libft is a custom C library built as a foundational project at 42 School. This library recreates standard C library functions and includes additional utilities for string manipulation, memory management, and linked list operations.
