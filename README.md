@@ -36,7 +36,7 @@ Libft includes both mandatory and bonus functions:
 - **ft_atoi**: Converts a string to an integer.
 - **ft_calloc**: Allocates memory and initializes it to zero.
 
-### Standard Library Function Implementations Part 1
+### Standard Library Function Implementations Part 2
 
 - **ft_itoa**: Converts an integer to a string.
 - **ft_split**: Splits a string into an array of substrings based on a delimiter.
