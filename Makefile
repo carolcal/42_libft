@@ -6,7 +6,7 @@
 #    By: cayamash <cayamash@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/08 15:38:33 by cayamash          #+#    #+#              #
-#    Updated: 2024/10/28 13:46:50 by cayamash         ###   ########.fr        #
+#    Updated: 2025/01/07 17:54:15 by cayamash         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c\
 		ft_atoi.c ft_calloc.c ft_itoa.c ft_split.c ft_striteri.c\
 		ft_substr.c ft_strjoin.c ft_strtrim.c ft_strmapi.c\
 		ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c\
-		ft_printf.c get_next_line.c
+		ft_printf_utils.c ft_printf.c get_next_line.c
 
 BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c\
 		ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c\
