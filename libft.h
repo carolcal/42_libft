@@ -12,8 +12,13 @@
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42
+# endif
+
+# ifndef FD_LEN
+#  define FD_LEN 42
 # endif
 
 # include <stdlib.h>

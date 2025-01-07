@@ -22,7 +22,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	{
 		temp_next = temp->next;
 		ft_lstdelone(temp, del);
-		temp = NULL;//testar sem esse null
+		temp = NULL;
 		temp = temp_next;
 	}
 	*lst = NULL;
