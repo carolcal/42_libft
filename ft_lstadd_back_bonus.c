@@ -24,26 +24,3 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	else
 		last->next = new;
 }
-
-/*int	main(void)
-{
-	t_list *head = NULL;
-	t_list *n1 = ft_lstnew("Last Node");
-	t_list *n2 = ft_lstnew("Middle Node");
-	t_list *n3 = ft_lstnew("First Node");
-	ft_lstadd_front(&head, n2);
-	ft_lstadd_front(&head, n3);
-	ft_lstadd_back(&head, n1);
-
-	t_list *temp = head;
-	while(temp != NULL)
-	{
-		printf("pointer: %p, content:%s, 
-		next: %p\n",temp, (char *)temp->content, temp->next);
-		temp = temp->next;
-	}
-	free(n1);
-	free(n2);
-	free(n3);
-	return (0);
-}*/

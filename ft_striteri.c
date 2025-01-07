@@ -23,16 +23,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-
-/*void	ft_plusindex(unsigned int i, char *c)
-{
-	*c = *c + i;
-}
-
-int	main(void)
-{
-	char	s[] = "Eu sou a luz das estrelas";
-	ft_striteri(s, &ft_plusindex);
-	printf("%s", s);
-	return (0);
-}*/

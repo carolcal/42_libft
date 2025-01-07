@@ -19,21 +19,3 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 	del(lst->content);
 	free(lst);
 }
-
-/*void del(void *content)
-{
-	free(content);
-}
-
-int	main(void)
-{
-	char	*str = ft_strdup("New Node");
-	t_list *n1 = ft_lstnew(str);
-
-	ft_lstdelone(n1, &del);
-	if(!n1)
-		printf("Success");
-	else
-		printf("error");
-	return (0);
-}*/

@@ -20,15 +20,3 @@ void	ft_putendl_fd(char *s, int fd)
 	write(fd, s, size);
 	write(fd, "\n", 1);
 }
-
-/*int	main(int argc, char *argv[])
-{
-	int	fd;
-	if(argc == 3)
-	{
-		fd = open(argv[1], O_WRONLY);
-		ft_putendl_fd(argv[2], fd);
-		close(fd);
-	}
-	return (0);
-}*/

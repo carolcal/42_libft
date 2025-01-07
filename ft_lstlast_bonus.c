@@ -23,20 +23,3 @@ t_list	*ft_lstlast(t_list *lst)
 		temp = temp->next;
 	return (temp);
 }
-
-/*int	main(void)
-{
-	t_list *head = NULL;
-	t_list *n1 = ft_lstnew("Last Node");
-	t_list *n2 = ft_lstnew("Middle Node");
-	t_list *n3 = ft_lstnew("First Node");
-	ft_lstadd_front(&head, n1);
-	ft_lstadd_front(&head, n2);
-	ft_lstadd_front(&head, n3);
-
-	printf("%s", (char *)ft_lstlast(head)->content);
-	free(n1);
-	free(n2);
-	free(n3);
-	return (0);
-}*/

@@ -34,12 +34,3 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	ft_printnbr_fd(nb, fd);
 }
-
-/*#include <limits.h>
-int	main(void)
-{
-	int fd = open("teste", O_WRONLY);
-	ft_putnbr_fd(INT_MAX, fd);
-	close (fd);
-	return (0);
-}*/

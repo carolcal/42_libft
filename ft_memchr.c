@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cayamash <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cayamash <cayamash@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 19:02:34 by cayamash          #+#    #+#             */
-/*   Updated: 2024/10/17 17:35:10 by cayamash         ###   ########.fr       */
+/*   Updated: 2024/10/29 10:51:04 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,25 +29,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
-/*int	main(void)
-{
-	printf("%s\n", (char *)memchr("bonjourno", 'n', 2));
-	printf("%s\n", (char *)ft_memchr("bonjourno", 'n', 2));
-	
-	char s[] = {0, 1, 2 ,3 ,4 ,5};
-	printf("%p, %p\n", s, (char *)memchr(s, 2, 3));
-	printf("%p, %p\n", s, (char *)ft_memchr(s, 2, 3));
-	
-	printf("%s\n", (char *)memchr(s, 2 + 256, 3));
-	printf("%s\n", (char *)ft_memchr(s, 2 + 256, 3));
-	
-	int size = 15;
- 	char *src = ft_calloc(size, 1);
- 
- 	strcpy(src, ":(){ :|: & };:");
- 	printf("%p", memchr(src, '\xde', size));
- 	printf("%p", ft_memchr(src, '\xde', size));
- 	
-	return (0);
-}*/

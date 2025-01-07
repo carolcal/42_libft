@@ -18,14 +18,3 @@ int	ft_toupper(int c)
 		return (c - 32);
 	return (c);
 }
-
-/*#include <ctype.h>
-#include <stdio.h>
-
-int	main()
-{
-	printf("char: a, original: %c, lib: %c\n", toupper('a'), ft_toupper('a'));
-	printf("char: A, original: %c, lib: %c\n", toupper('A'), ft_toupper('A'));
-	printf("char: $, original: %c, lib: %c\n", toupper('$'), ft_toupper('$'));
-	return(0);
-}*/

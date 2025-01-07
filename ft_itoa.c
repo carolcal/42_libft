@@ -64,13 +64,3 @@ char	*ft_itoa(int n)
 	nbr[i] = '\0';
 	return (nbr);
 }
-
-/*int	main(void)
-{
-	printf("%s\n", ft_itoa(-67));
-	printf("%s\n", ft_itoa(INT_MIN));
-	printf("%s\n", ft_itoa(INT_MAX));
-	printf("%s\n", ft_itoa(0));
-	printf("%s\n", ft_itoa(-357));
-	return (0);
-}*/

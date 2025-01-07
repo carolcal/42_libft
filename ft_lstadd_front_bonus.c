@@ -20,22 +20,3 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	*lst = new;
 	return ;
 }
-
-/*int	main(void)
-{
-	t_list *head = NULL;
-	t_list *n1 = ft_lstnew("New Node");
-	t_list *n2 = ft_lstnew("New New Node");
-	ft_lstadd_front(&head, n1);
-	ft_lstadd_front(&head, n2);
-
-	t_list *temp = head;
-	while(temp != NULL)
-	{
-		printf("pointer: %p, content:%s, 
-		next: %p\n",temp, (char *)temp->content, temp->next);
-		temp = temp->next;
-	}
-
-	return (0);
-}*/

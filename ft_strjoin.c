@@ -6,7 +6,7 @@
 /*   By: cayamash <cayamash@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 11:27:20 by cayamash          #+#    #+#             */
-/*   Updated: 2024/10/22 10:28:40 by cayamash         ###   ########.fr       */
+/*   Updated: 2024/10/29 14:20:54 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,21 +29,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcat(s_join, s2, join_len);
 	return (s_join);
 }
-
-/*int	main()
-{
-//	printf("%s\n", ft_strjoin("I got the", "eye of the tiger!"));
-//	printf("%s\n", ft_strjoin("^ ", "hey"));
-//	printf("%s\n", ft_strjoin("\0", "oi"));
-//	printf("%s\n", ft_strjoin("", "\0"));
-	char *s1 = "my favorite animal is";
- 	char *s2 = " ";
- 	char *s3 = "the nyancat";
- 	char *res = ft_strjoin(ft_strjoin(s1, s2), s3);
-	char *ress = strjoin(strjoin(s1, s2), s3);
-	printf("%i\n", strcmp(res, "my favorite animal is the nyancat"));
-	if (!strcmp(res, "my favorite animal is the nyancat"))
-		printf("está certo\n");
-	write (1, res, 35);
-	return (0);
-}*/

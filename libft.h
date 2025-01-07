@@ -6,17 +6,21 @@
 /*   By: cayamash <cayamash@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 15:24:50 by cayamash          #+#    #+#             */
-/*   Updated: 2024/10/24 11:47:25 by cayamash         ###   ########.fr       */
+/*   Updated: 2025/01/06 11:37:46 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
 
 # include <stdlib.h>
 # include <unistd.h>
 # include <fcntl.h>
-# include <stdio.h> //del
+# include <stddef.h>
+# include <stdarg.h>
 
 typedef struct s_list
 {
@@ -67,5 +71,12 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+char	*get_next_line(int fd);
+char	*get_next_line_bonus(int fd);
+int		ft_putchar(char c);
+int		ft_putstr(char *s);
+int		ft_putbase(long long n, char *base, int div);
+int		ft_putpointer(unsigned long p);
+int		ft_printf(const char *str, ...);
 
 #endif

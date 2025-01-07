@@ -31,25 +31,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
-/*char	ft_plusindex(unsigned int i, char c)
-{
-	return (c + i);
-}
-
-int	main(void)
-{
-	//printf("%s", ft_strmapi("eu sou o tudo e o nada", &ft_plusindex));
-     char *b = "override this !";
-        size_t size = strlen(b);
-        char b2[size + 1];
-
-        for (size_t i = 0; i < size; i++)
-                b2[i] = ft_plusindex(i, b[i]);
-        b2[size] = '\0';
-        char *ret = ft_strmapi(b, ft_plusindex);
-        if (!strcmp(b2, ret))
-                printf("TEST_SUCCESS");
-        else
-            printf("TEST_FAILED");
-	return (0);
-}*/

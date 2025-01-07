@@ -28,18 +28,3 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (size);
 }
-
-/*int	main(void)
-{
-	t_list *head = NULL;
-	t_list *n1 = ft_lstnew("New Node");
-	t_list *n2 = ft_lstnew("New New Node");
-	ft_lstadd_front(&head, n1);
-	ft_lstadd_front(&head, n2);
-
-	printf("%i", ft_lstsize(head));
-	free(n1);
-	free(n2);
-
-	return (0);
-}*/

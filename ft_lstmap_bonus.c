@@ -36,38 +36,3 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	(del)(temp);
 	return (new_lst);
 }
-
-/*void	*uau(void *node)
-{
-	node = ft_strdup("Uau");
-	return (node);
-}
-
-void del(void *node)
-{
-	free(node);
-}
-
-int	main(void)
-{
-	t_list *head = NULL;
-	t_list *n1 = ft_lstnew("New Node");
-	t_list *n2 = ft_lstnew("New New Node");
-	ft_lstadd_front(&head, n1);
-	ft_lstadd_front(&head, n2);
-
-	t_list *temp = head;
-	while(temp != NULL)
-	{
-		printf("p: %p, c:%s, n: %p\n",temp, (char *)temp->content, temp->next);
-		temp = temp->next;
-	}
-	t_list *head2 = ft_lstmap(head, &uau, &del);
-	temp = head2;
-	while(temp != NULL)
-	{
-		printf("p: %p, c:%s, n: %p\n",temp, (char *)temp->content, temp->next);
-		temp = temp->next;
-	}
-	return (0);
-}*/

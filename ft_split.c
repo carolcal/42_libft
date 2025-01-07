@@ -6,7 +6,7 @@
 /*   By: cayamash <cayamash@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 16:05:29 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/28 16:45:27 by cayamash         ###   ########.fr       */
+/*   Updated: 2024/10/29 14:58:08 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,15 +82,3 @@ char	**ft_split(char const *s, char c)
 	fill_array(array, size, s, c);
 	return (array);
 }
-
-/*int	main()
-{
-	char **array = ft_split("surybiw wieyriwer cre87 ecw", 'w');
-	for(int i = 0; array[i] != NULL; i++)
-	{
-		printf("%s\n", array[i]);
-		free(array[i]);
-	}
-	free(array);
-	return (0);
-}*/

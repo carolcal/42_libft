@@ -23,20 +23,3 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		temp = temp->next;
 	}
 }
-
-/*void	print(void *node)
-{
-	t_list *n;
-	n = node;
-	printf("%p, %s\n", n, (char *)n->content);
-}
-int	main(void)
-{
-	t_list *head = NULL;
-	t_list *n1 = ft_lstnew("New Node");
-	t_list *n2 = ft_lstnew("New New Node");
-	ft_lstadd_front(&head, n1);
-	ft_lstadd_front(&head, n2);
-	ft_lstiter(head, &print);
-	return (0);
-}*/

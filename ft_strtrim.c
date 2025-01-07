@@ -3,26 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cayamash <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cayamash <cayamash@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 11:51:47 by cayamash          #+#    #+#             */
-/*   Updated: 2024/10/18 19:05:20 by cayamash         ###   ########.fr       */
+/*   Updated: 2024/10/29 14:49:08 by cayamash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_contains(char c, const char *set)
-{
-	int	i;
-
-	i = 0;
-	while (set[i] != c && set[i] != '\0')
-		i++;
-	if (set[i] == c)
-		return (1);
-	return (0);
-}
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -33,15 +21,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	len = ft_strlen(s1);
 	i = 0;
 	j = len;
-	while (ft_contains(s1[i], set) == 1)
+	while (ft_strchr(set, s1[i]))
 		i++;
-	while (ft_contains(s1[j], set) == 1)
+	while (ft_strchr(set, s1[j]))
 		j--;
 	return (ft_substr(s1, i, (j - i + 1)));
 }
-
-/*int	main()
-{
-	printf("%s", ft_strtrim("%Ieiheheieihe%I", "Ie%"));
-	return (0);
-}*/
